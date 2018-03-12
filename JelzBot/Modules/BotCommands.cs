@@ -33,7 +33,8 @@ namespace JelzBot.Modules {
             embed.WithTitle("Commands");
             embed.AddField("help", "displays this message");
             embed.AddField("commands", "displays this message");
-            embed.AddField("toggleauto", "Stops the bot from responding to key words");
+            embed.AddField("toggleauto", "Toggles the bot from responding to key words");
+            embed.AddField("togglelolchecker", "Toggles the bot from responding to lol or lmao words");
             embed.AddField("togglemulti", "Prevents the bot from putting multiple responses per user input");
             embed.AddField("stickerof [string]", "Finds a sticker of whatever string is inserted after the command");
             embed.AddField("gifof [string]", "Finds a gif of whatever string is inserted after the command");
@@ -49,6 +50,12 @@ namespace JelzBot.Modules {
         [Command("toggleauto")]
         public async Task ToggleAutoResponse () {
             KeyWordChecker.KeyCheckerEnabled = !KeyWordChecker.KeyCheckerEnabled;
+            await ReplyAsync("Toggled");
+        }
+
+        [Command("togglelolchecker")]
+        public async Task ToggleLolChecker() {
+            KeyWordChecker.KeyToLolCheckerEnabled = !KeyWordChecker.KeyToLolCheckerEnabled;
             await ReplyAsync("Toggled");
         }
 
