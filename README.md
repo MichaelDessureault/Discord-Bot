@@ -8,14 +8,14 @@ Features:
     - These key words can be for Gifs/Stickers or a phase EG: Key Word is "hello" and the output is "Hello World!", when "hello" is typed in the chat if key word checker is enabled it will print the output "Hello World!" into the chat that the key word was typed in.
     
 What you have to do to use this:  (All config files are found in the Resources Folder)
-  Step 1: Open discordconfig.json file
-    a) Populate the token
-    b) Populate the cmdPrefix.
-  Step 2: Open giphyconfig.json file
-    a) Populate the key
-  Step 3: Open twitterconfig.json file
-    a) Populate the custer_key
-    b) Populate the customer_key_secret
-    c) Populate the access_token
-    d) Populate the access_token_secret
-    e) Populate the channel id that the bot will post messages too.
+  - Step 1: Open discordconfig.json file
+    - Populate the token
+    - Populate the cmdPrefix.
+  - Step 2: Open giphyconfig.json file
+    - Populate the key
+  - Step 3: Open twitterconfig.json file
+    - Populate the custer_key
+    - Populate the customer_key_secret
+    - Populate the access_token
+    - Populate the access_token_secret
+    - Populate the channel id that the bot will post messages too.
