@@ -7,7 +7,7 @@ Features:
 - Key word dectection, has a dictionary that the user can create through discord.
     - These key words can be for Gifs/Stickers or a phase EG: Key Word is "hello" and the output is "Hello World!", when "hello" is typed in the chat if key word checker is enabled it will print the output "Hello World!" into the chat that the key word was typed in.
     
-What you have to do to use this:  (All config files are found in the Resources Folder)
+Setup Procress:  (All config files are found in the Resources Folder)
   - Step 1: Open discordconfig.json file
     - Populate the token
     - Populate the cmdPrefix.
