@@ -63,8 +63,7 @@ namespace JelzBot {
             
             int argPos = 0;
 
-            var hasPrefix = (message.HasStringPrefix(discordBotConfig.cmdPrefix,  ref argPos) || 
-                             message.HasStringPrefix(discordBotConfig.cmdPrefix2, ref argPos));
+            var hasPrefix = message.HasStringPrefix(discordBotConfig.cmdPrefix, ref argPos);
             
             var context = new SocketCommandContext(_client, message);
 

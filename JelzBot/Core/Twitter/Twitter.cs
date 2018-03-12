@@ -21,22 +21,26 @@ namespace JelzBot.Core.Twitter {
         private static Dictionary<string, string> _twitterKeyWords;
 
         public static bool TweetReplys { get; set; } = false;
-
+        
         internal static Task Twitter_Ready () {
             Console.WriteLine("Twitter Starting");
-            var twitterBot = Config.twitterBot;
+            var twitterBotConfig = Config.TwitterBotConfig;
 
             // Authentication 
             var credentails = Auth.SetUserCredentials(
-                twitterBot.customer_key, 
-                twitterBot.customer_key_secret, 
-                twitterBot.access_token, 
-                twitterBot.access_token_secret
+                twitterBotConfig.customer_key, 
+                twitterBotConfig.customer_key_secret, 
+                twitterBotConfig.access_token, 
+                twitterBotConfig.access_token_secret
             );
 
             // Get information about user
             _user = User.GetAuthenticatedUser(credentails);
-            _channel = Global.Client.GetChannel(420299175616315412) as SocketTextChannel;
+            _channel = Global.Client.GetChannel(twitterBotConfig.channel_id) as SocketTextChannel;
+
+            if (_channel == null)
+                Console.WriteLine("Warrning!! Channel id not found for twitterbot (update the config files channel_id)");
+
             _ignoreTweetsBy  = DataStorage.LoadData<Dictionary<string, string>>(DataStorage.KIgnoreTweetsByFile);
             _twitterKeyWords = DataStorage.LoadData<Dictionary<string, string>>(DataStorage.KTwitterKeyWordsFile);
 

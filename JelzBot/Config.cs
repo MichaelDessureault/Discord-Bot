@@ -4,24 +4,23 @@ using Newtonsoft.Json;
 namespace JelzBot {
     static class Config {
         #region const fileLocations
-        private const string configFolder           = "Resources";
-        private const string discord_configFile     = "discordconfig.json";
-        private const string twitter_configFile     = "twitterconfig.json";
-        private const string giphy_configFile       = "giphyconfig.json";
-        private const string cleverbot_configFile   = "cleverbotconfig.json";
+        private const string KConfigFolder           = "Resources";
+        private const string KDiscord_ConfigFile     = "discordconfig.json";
+        private const string KTwitter_ConfigFile     = "twitterconfig.json";
+        private const string KGiphy_ConfigFile       = "giphyconfig.json";
         #endregion
 
-        internal static DiscordConfig discordBot;
-        internal static TwitterConfig twitterBot;
-        internal static GiphyConfig giphyBot;
+        internal static DiscordConfig DiscordBotConfig { get; private set; }
+        internal static TwitterConfig TwitterBotConfig { get; private set; }
+        internal static GiphyConfig   GiphyBotConfig   { get; private set; }
 
         static Config () {
-            if (!Directory.Exists(configFolder))
-                Directory.CreateDirectory(configFolder);
+            if (!Directory.Exists(KConfigFolder))
+                Directory.CreateDirectory(KConfigFolder);
 
-            discordBot = Setup<DiscordConfig>(configFolder + "/" + discord_configFile);
-            twitterBot = Setup<TwitterConfig>(configFolder + "/" + twitter_configFile);
-            giphyBot   = Setup<GiphyConfig>  (configFolder + "/" + giphy_configFile);
+            DiscordBotConfig = Setup<DiscordConfig>(KConfigFolder + "/" + KDiscord_ConfigFile);
+            TwitterBotConfig = Setup<TwitterConfig>(KConfigFolder + "/" + KTwitter_ConfigFile);
+            GiphyBotConfig   = Setup<GiphyConfig>  (KConfigFolder + "/" + KGiphy_ConfigFile);
         }
 
         static T Setup<T> (string file) {
@@ -49,6 +48,7 @@ namespace JelzBot {
             public string customer_key_secret;
             public string access_token;
             public string access_token_secret;
+            public ulong  channel_id;
         }
 
         internal struct GiphyConfig { 
