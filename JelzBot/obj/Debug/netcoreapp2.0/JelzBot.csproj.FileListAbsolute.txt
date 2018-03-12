@@ -1,0 +1,11 @@
+C:\Users\Michael\source\repos\JelzBot\JelzBot\bin\Debug\netcoreapp2.0\JelzBot.deps.json
+C:\Users\Michael\source\repos\JelzBot\JelzBot\bin\Debug\netcoreapp2.0\JelzBot.runtimeconfig.json
+C:\Users\Michael\source\repos\JelzBot\JelzBot\bin\Debug\netcoreapp2.0\JelzBot.runtimeconfig.dev.json
+C:\Users\Michael\source\repos\JelzBot\JelzBot\bin\Debug\netcoreapp2.0\JelzBot.dll
+C:\Users\Michael\source\repos\JelzBot\JelzBot\bin\Debug\netcoreapp2.0\JelzBot.pdb
+C:\Users\Michael\source\repos\JelzBot\JelzBot\obj\Debug\netcoreapp2.0\JelzBot.csproj.CoreCompileInputs.cache
+C:\Users\Michael\source\repos\JelzBot\JelzBot\obj\Debug\netcoreapp2.0\JelzBot.AssemblyInfoInputs.cache
+C:\Users\Michael\source\repos\JelzBot\JelzBot\obj\Debug\netcoreapp2.0\JelzBot.AssemblyInfo.cs
+C:\Users\Michael\source\repos\JelzBot\JelzBot\obj\Debug\netcoreapp2.0\JelzBot.dll
+C:\Users\Michael\source\repos\JelzBot\JelzBot\obj\Debug\netcoreapp2.0\JelzBot.pdb
+C:\Users\Michael\source\repos\JelzBot\JelzBot\obj\Debug\netcoreapp2.0\JelzBot.csprojResolveAssemblyReference.cache
